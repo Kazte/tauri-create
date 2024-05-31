@@ -1,0 +1,29 @@
+{
+  "name": "@kazte/tauri-create",
+  "version": "0.0.1",
+  "main": "./dist/bin.js",
+  "bin": {
+    "menimal": "./dist/bin.js"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "tsc": "tsc -p tsconfig.json",
+    "dev": "tsx src/bin.ts",
+    "bundle": "tsup && tsx scripts/copy-templates.ts",
+    "upload": "pnpm bundle && npm publish"
+  },
+  "devDependencies": {
+    "@types/node": "^20.12.13",
+    "@types/yargs": "^17.0.32",
+    "tsup": "^8.0.1",
+    "tsx": "^4.7.0",
+    "typescript": "^5.3.3"
+  },
+  "dependencies": {
+    "inquirer": "^9.2.22",
+    "ora": "^8.0.1",
+    "yargs": "^17.7.2"
+  }
+}
